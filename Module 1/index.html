@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Prac</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="nav__header">
+      <div>
+        <img
+          src="/images/cat.jpg"
+          width="50px"
+          alt="cat logo"
+          class="nav__logo"
+        />
+      </div>
+      <div>
+        <h1 class="ugly">ugliest website</h1>
+      </div>
+      <ul class="nav__links">
+        <li class="nav__link">
+          <a href="#test" class="nav__link--item">test</a>
+        </li>
+        <li class="nav__link">
+          <a href="#images" class="nav__link--item">images</a>
+        </li>
+        <li class="nav__link">
+          <a href="#form" class="nav__link--item">form</a>
+        </li>
+      </ul>
+    </nav>
+
+    <h1 id="test">Test</h1>
+    <h2>Links in Unordered ist</h2>
+    <ul>
+      <li>Link to <a href="https://www.google.com">google.com</a></li>
+      <li>Link to <a href="https://www.youtube.com">youtube.com</a></li>
+    </ul>
+    <h2>Links in ordered list</h2>
+    <ol>
+      <li>Link to <a href="https://www.google.com">google.com</a></li>
+      <li>Link to <a href="https://www.youtube.com">youtube.com</a></li>
+    </ol>
+
+    <h2 id="images">Images (relative and absolute)</h2>
+
+    <h2 class="pet__image">Relative image path</h2>
+    <img src="/images/cat.jpg" class="cat" alt="lil cat" ; />
+
+    <h2 class="pet__image">Absolute image path</h2>
+    <img
+      src="https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=1200:*"
+      class="dog"
+      alt="doggo"
+      ;
+    />
+
+    <article>
+      <h2>Article Element Section</h2>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias
+        provident ea quaerat fugiat at commodi et nam laboriosam repudiandae,
+        deleniti deserunt cum corrupti necessitatibus laudantium sequi cumque
+        aspernatur, magni voluptatum?
+      </p>
+    </article>
+    <aside>
+      <h2>Aside element section</h2>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi fugiat
+        sit vero ex debitis amet magni adipisci doloribus aut impedit?
+      </p>
+    </aside>
+    <h2 id="form">Form Prac</h2>
+    <form action="">
+      <div class="user__name">
+        <label for="name">Enter your name: </label>
+        <input type="text" name="name" id="name" required />
+      </div>
+      <div class="user__email">
+        <label for="email">Enter your email: </label>
+        <input type="email" name="email" id="email" required />
+      </div>
+      <div class="user__submission">
+        <input type="submit" value="Subscribe" class="submit"/>
+      </div>
+    </form>
+    <table class="table__data">
+      <tr>
+        <td>Column 1 Row 1</td>
+        <td>Colum 2 Row 1</td>
+        <td>Colum 3 Row 1</td>
+      </tr>
+      <tr>
+        <td>Column 1 Row 1</td>
+        <td>Colum 2 Row 2</td>
+        <td>Colum 3 Row 2</td>
+      </tr>
+    </table>
+    <h2 class="hamster__title">Look it is a hamster</h2>
+    <div class="yt__video">
+      <iframe
+        width="500"
+        height="300"
+        src="https://www.youtube.com/embed/rsiJEeP8CQs"
+        title="Commanding My Team to Victory in Overwatch 2"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+        class="chazm"
+      ></iframe>
+    </div>
+    <footer>
+      <div>COPYRIGHT&#169;2023</div>
+      <div>
+        <a href="linkedin.com" class="footer__links">Linked-In</a>
+      </div>
+      <div>
+        <a href="" class="footer__links">Socials</a>
+      </div>
+      <div>
+        <a href="" class="footer__links">Youtube</a>
+      </div>
+    </footer>
+  </body>
+</html>

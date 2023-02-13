@@ -1,0 +1,188 @@
+*{
+  color: white;
+  box-sizing: border-box;
+}
+
+.cat,
+.dog {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  border: 2px solid white;
+}
+
+.cat:hover, .dog:hover {
+  transform:scale(1.2);
+}
+
+.logo {
+  background-color: black;
+  padding: 24px;
+  border-radius: 25px;
+}
+
+ul {
+  list-style-type:circle;
+}
+
+ol
+{
+  list-style-type:lower-latin;
+}
+
+#images{
+  margin: 0 auto;
+  text-align: center;
+  width: 1000px;
+}
+
+.pet__image {
+  text-align: center;
+  margin: 32px auto;
+}
+
+.chickens {
+  background-color: aqua;
+}
+
+.horsies {
+  background-color: purple;
+}
+
+html {
+  font-family: sans-serif;
+}
+h2 {
+  background-color: pink;
+  border: 5px ridge white;
+  width: 25%;
+  padding: 8px;
+  border-radius: 25px;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(200, 200, 200);
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+}
+
+td,
+th {
+  border: 1px solid rgb(190, 190, 190);
+  padding: 10px 20px;
+}
+
+td {
+  text-align: center;
+}
+
+caption {
+  padding: 10px;
+}
+
+.user__name,
+.user__email {
+  padding-bottom: 16px;
+}
+
+.chazm {
+  border: 5px solid black;
+}
+.yt__video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 8px;
+}
+.hamster__title {
+  text-align: center;
+  margin: 8px auto 0 auto;
+}
+.table__data {
+  margin: 0 auto;
+}
+
+footer {
+  display: flex;
+  width: 900px;
+  justify-content: center;
+  gap: 16px;
+  margin: 0 auto;
+  padding-top: 24px;
+  color: white;
+}
+
+.footer__links {
+  text-decoration: none;
+  color: white;
+}
+
+.footer__links:active,
+.footer__links:hover {
+  color: red;
+}
+
+.nav__logo {
+  width: 100px;
+  border-radius: 50%;
+  padding: 16px;
+}
+
+.nav__logo:hover {
+  transform: scale(1.1);
+}
+
+.nav__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 25px;
+  background-color: pink;
+}
+
+.nav__links {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20px;
+}
+
+.nav__link {
+  padding-left: 16px;
+  list-style: none;
+}
+
+.nav__link--item {
+  text-decoration: none;
+  color: white;
+}
+.nav__link--item:hover {
+  color: purple;
+  transform: scale(1.1)
+}
+
+.ugly:hover {
+  color: purple;
+  transform: scale(1.5);
+}
+
+
+body {
+  background-color: blueviolet;
+}
+
+div > input {
+  background-color: pink;
+  padding: 16px;
+  border-radius: 25px;
+  border: 1px solid white;
+}
+
+.submit:hover, .submit:active {
+  background-color:black;
+  color: white;
+  cursor: pointer;
+}
