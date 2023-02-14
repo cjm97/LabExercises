@@ -46,22 +46,32 @@
     <button onclick="orderList()" class="submit orderButton">Order List</button>
     <h2>Links in ordered list</h2>
     <ol>
-      <li>Link to <a href="https://www.google.com" class="links">google.com</a></li>
-      <li>Link to <a href="https://www.youtube.com" class="links">youtube.com</a></li>
+      <li>
+        Link to <a href="https://www.google.com" class="links">google.com</a>
+      </li>
+      <li>
+        Link to <a href="https://www.youtube.com" class="links">youtube.com</a>
+      </li>
     </ol>
 
     <h2 id="images">Images (relative and absolute)</h2>
 
     <h2 class="pet__image">Relative image path</h2>
-    <img src="images/cat.jpg" class="cat" alt="lil cat" ; />
+    <img src="images/cat.jpg" class="cat" alt="lil cat" id="cat" ; />
+    <img src="images/wrong.png" alt="" id="wrong" class="cat">
+
+    <button onclick="removePicture()" class="change__picture">
+      Don't like cats? Press me to change to a dog!
+    </button>
 
     <h2 class="pet__image">Absolute image path</h2>
     <img
       src="https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=1200:*"
       class="dog"
-      alt="doggo"
+      alt="doggo" id="dogz"
       ;
     />
+    <img src="images/cat.jpg" class="cat" id="cat2" alt="">
 
     <article>
       <h2>Article Element Section</h2>
@@ -134,10 +144,19 @@
     <script>
       function orderList() {
         document.getElementById("orderMe1").style.listStyle = "decimal";
-        document.getElementById("orderMe2").style.listStyle= "decimal";
+        document.getElementById("orderMe2").style.listStyle = "decimal";
         document.getElementById("orderMe1").style.fontSize = "30px";
         document.getElementById("orderMe2").style.fontSize = "30px";
       }
+
+    
+      function removePicture (){
+        document.getElementById("cat").style.display = "none";
+        document.getElementById("wrong").style.display = "block";
+        document.getElementById("dogz").style.display = "none";
+        document.getElementById("cat2").style.display= "block";
+      }
+
     </script>
   </body>
 </html>

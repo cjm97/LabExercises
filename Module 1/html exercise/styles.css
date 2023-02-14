@@ -51,6 +51,7 @@ ol
   background-color: purple;
 }
 
+
 html {
   font-family: sans-serif;
 }
@@ -174,12 +175,20 @@ body {
   background-color: blueviolet;
 }
 
-.submit {
+.submit, .change__picture {
   background-color: pink;
   padding: 16px;
   border-radius: 25px;
   border: 1px solid white;
 }
+
+.change__picture {
+  display: block;
+  margin: 20px auto 0 auto;
+  font-size: 20px;
+}
+
+
 div > input {
   background-color: pink;
   border: 1px solid white;
@@ -196,7 +205,7 @@ table {
 td {
   border: 5px solid white;
 }
-.submit:hover, .submit:active {
+.submit:hover, .submit:active, .change__picture:hover, .change__picture:active {
   background-color:black;
   color: white;
   cursor: pointer;
@@ -210,4 +219,8 @@ td {
 .links:hover {
   font-size: 20px;
   color: red;
+}
+
+#wrong, #cat2 {
+  display: none;
 }
