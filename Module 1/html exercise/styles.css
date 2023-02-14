@@ -174,15 +174,40 @@ body {
   background-color: blueviolet;
 }
 
-div > input {
+.submit {
   background-color: pink;
   padding: 16px;
   border-radius: 25px;
   border: 1px solid white;
 }
+div > input {
+  background-color: pink;
+  border: 1px solid white;
+  padding: 16px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
 
+table {
+  background-color: pink;
+  
+}
+
+td {
+  border: 5px solid white;
+}
 .submit:hover, .submit:active {
   background-color:black;
   color: white;
   cursor: pointer;
+}
+
+.orderButton {
+  margin-left: 20px;
+}
+
+
+.links:hover {
+  font-size: 20px;
+  color: red;
 }

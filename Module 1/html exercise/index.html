@@ -34,15 +34,20 @@
     </nav>
 
     <h1 id="test">Test</h1>
-    <h2>Links in Unordered ist</h2>
+    <h2>Links in Unordered list</h2>
     <ul>
-      <li>Link to <a href="https://www.google.com">google.com</a></li>
-      <li>Link to <a href="https://www.youtube.com">youtube.com</a></li>
+      <li id="orderMe1">
+        Link to <a href="https://www.google.com" class="links">google.com</a>
+      </li>
+      <li id="orderMe2">
+        Link to <a href="https://www.youtube.com" class="links">youtube.com</a>
+      </li>
     </ul>
+    <button onclick="orderList()" class="submit orderButton">Order List</button>
     <h2>Links in ordered list</h2>
     <ol>
-      <li>Link to <a href="https://www.google.com">google.com</a></li>
-      <li>Link to <a href="https://www.youtube.com">youtube.com</a></li>
+      <li>Link to <a href="https://www.google.com" class="links">google.com</a></li>
+      <li>Link to <a href="https://www.youtube.com" class="links">youtube.com</a></li>
     </ol>
 
     <h2 id="images">Images (relative and absolute)</h2>
@@ -85,7 +90,7 @@
         <input type="email" name="email" id="email" required />
       </div>
       <div class="user__submission">
-        <input type="submit" value="Subscribe" class="submit"/>
+        <input type="submit" value="Subscribe" class="submit" />
       </div>
     </form>
     <table class="table__data">
@@ -125,5 +130,14 @@
         <a href="" class="footer__links">Youtube</a>
       </div>
     </footer>
+
+    <script>
+      function orderList() {
+        document.getElementById("orderMe1").style.listStyle = "decimal";
+        document.getElementById("orderMe2").style.listStyle= "decimal";
+        document.getElementById("orderMe1").style.fontSize = "30px";
+        document.getElementById("orderMe2").style.fontSize = "30px";
+      }
+    </script>
   </body>
 </html>
