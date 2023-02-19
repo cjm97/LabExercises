@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Module 2 Lab Exercise</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Lab 2 Exercise Tasks" />
+    <meta name="keywords" content="HTML" />
+    <meta name="author" content="Chris Marsh" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <!-- works like <a href="/index.html">Home</a> -->
+        <a href="/">Home</a>
+        <a href="./form.html">Form</a>
+      </nav>
+    </header>
+    <h1>My HTML Learning Journey</h1>
+
+    <article>
+      <h2>Learning elements - div, span, p, pre, ul, li, ol, article.</h2>
+      <div>Earth</div>
+      <div>Wind</div>
+      <div>Fire</div>
+      <span>Mars</span>
+      <span>Water</span>
+      <span>Lightning</span>
+      <p>This represents a paragraph. Very nice.</p>
+      <pre>
+Text in a pre element is displayed in a fixed-width font, and it preserves both
+        spaces and
+        line breaks.
+    </pre
+      >
+      <ul>
+        <li>A Game of Thrones</li>
+        <li>AClash of Kings</li>
+        <li>A Storm of Swords</li>
+        <li>A Feast for Crows</li>
+        <li>A Dance with Dragons</li>
+        <li>The Winds of Winter</li>
+        <li>A Dream of Spring</li>
+      </ul>
+      <ol>
+        <li>The Way of Kings</li>
+        <li>Words of Radiance</li>
+        <li>Oathbringer</li>
+        <li>Rhythm of War</li>
+        <li>Knights of Wind and Truth</li>
+      </ol>
+    </article>
+    <article>
+      <h2>Table</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>First header</th>
+            <th colspan="2">Second header</th>
+          </tr>
+          <tr>
+            <th>First cell second row</th>
+            <th>Second cell second row</th>
+            <td>Third cell second row</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>First cell - third row</td>
+            <td rowspan="2">Second cell - third row</td>
+          </tr>
+          <tr>
+            <td>First cell - fourth</td>
+            <td>Second cell - fourth row</td>
+          </tr>
+          <img src="https://picsum.photos/200/300" alt="" />
+          <video autoplay width="250">
+            <source src="/media/cc0-videos/flower.webm" type="video/webm" />
+            <source src="/media/cc0-videos/flower.mp4" type="video/mp4" />
+            Sorry, your browser doesn't support embedded videos.
+          </video>
+          <audio autoplay src="/media/cc0-audio/t-rex-roar.mp3">
+            Your browser does not support the
+            <code>audio</code> element.
+          </audio>
+        </tbody>
+      </table>
+    </article>
+    <main></main>
+    <footer>Copyright 2021 &copy;</footer>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form</title>
+    <link rel="stylesheet" href="forms.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <!-- works like <a href="/index.html">Home</a> -->
+        <a href="/">Home</a>
+        <a href="./index.html">Form</a>
+      </nav>
+    </header>
+    <form method="POST" action="http://localhost:3000/profile">
+        <label for="Book form" class="form__header"><h3>Best Fantasy Book Vote</h3></label>
+      <div class="first__name">
+        <label for="fname">First Name: </label>
+        <input type="text" id="fname" name="fname" />
+      </div>
+      <div class="last__name">
+        <label for="lname">Last Name: </label>
+        <input type="text" id="lname" name="name" />
+      </div>
+      <div class="radio__button">
+        <label for="terms and conditions"
+          >Check radio to accept terms and conditions</label
+        >
+        <input type="radio" name="terms and conditions" value="check" />
+      </div>
+      <div class="checkbox">
+        <label for="Checkbox">Subscribe to our mailing list</label>
+        <input type="checkbox" name="checkbox" value="checkbox" />
+      </div>
+      <div class="select__container">
+        <select name="Best Fantasy Books" id="books" class="books">
+          <option value="AGOT">A Game of Thrones</option>
+          <option value="TWOK">The Way of Kings</option>
+          <option value="ASOS">A Storm of Swords</option>
+          <option value="WOR">Words of Radiance</option>
+        </select>
+      </div>
+      <div class="button__container">
+        <button type="submit" class="button">Submit Form</button>
+      </div>
+    </form>
+    <main></main>
+    <footer>Copyright 2021 &copy;</footer>
+  </body>
+</html>

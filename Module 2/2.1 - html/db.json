@@ -1,0 +1,23 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "fname": "Chris",
+    "name": "Marsh",
+    "terms and conditions": "check",
+    "checkbox": "checkbox",
+    "Best Fantasy Books": "TWOK"
+  }
+}

@@ -1,0 +1,25 @@
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border: 1px solid black;
+    max-width: 800px;
+    background-color: pink;
+}
+
+.form__header, .first__name, .last_name, .radio_button, .checkbox, .select__container, .button__container {
+    padding: 8px;
+}
+
+.button {
+    padding: 4px;
+    background-color: aquamarine;
+    border:2px solid white;
+    color: white;
+}
+
+input {
+    border: 2px solid white;
+}

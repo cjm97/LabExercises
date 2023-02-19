@@ -23,11 +23,11 @@ function userGreeting(a){
 
 userGreeting("Chris");
 
-// console.log(subtraction(3, 2));
-// console.log(addition(3, 2));
-// console.log(division(4, 2));
-// console.log(multiplication(3, 2));
-// console.log(modulo(10,4));
+console.log(subtraction(3, 2));
+console.log(addition(3, 2));
+console.log(division(4, 2));
+console.log(multiplication(3, 2));
+console.log(modulo(10,4));
 
 
 var Sentiment = require('sentiment');
