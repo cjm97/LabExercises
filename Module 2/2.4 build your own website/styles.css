@@ -20,10 +20,14 @@ main {
   background-color: #e6efe9;
 }
 #experience {
+  background-color: #c2eaba;
+}
+
+#experience,
+#projects {
   border-radius: 50px;
   margin: 16px;
   padding: 16px 32px;
-  background-color: #c2eaba;
   width: 80vw;
 }
 
@@ -83,14 +87,19 @@ aside {
 }
 
 .header__links--list i:hover {
-    color:blue;
+  color: blue;
 }
 
 .header__links--link {
   padding: 8px;
 }
+
+.header__links--link:hover {
+  transform: scale(1.1);
+}
+
 .personal__info {
-  margin-top: 32px;
+  margin: 32px;
 }
 
 .personal__info--title {
@@ -155,10 +164,41 @@ aside {
   line-height: 1.5;
 }
 
+/* projects */
+#projects {
+  background-color: #a7c4a0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project__container {
+  margin: 40px;
+}
+
+.project__item--header {
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.project__item--image-wrapper {
+  width: 400px;
+}
+.project__image {
+  width: 100%;
+  border-radius: 40px;
+  border: 5px solid #e6efe9;
+}
+
+.project__image:hover {
+  border: 5px solid rgba(20, 112, 192, 0.568);
+  transform: scale(1.1);
+}
 /* footer */
 
 footer {
-  background-color: #8f8389;
+  background-color: #5a5a5a;
   padding: 16px;
   text-align: center;
   height: 5vh;
@@ -184,4 +224,110 @@ footer:hover {
 }
 .colour5 {
   background-color: #8f8389;
+}
+
+/* mobile */
+
+
+
+
+/* tablets */
+
+@media screen and (max-width: 600px) {
+  body {
+  width: 100%;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+  }
+
+  footer {
+    height: auto;
+  }
+  
+  aside, #experience, #projects {
+    width: 100%;
+    padding: 20px 0;
+    margin: 0;
+    border-radius: 0;
+  }
+  h1 {
+    font-size: 18px;
+  }
+  h2 {
+    font-size: 16px;
+  }
+  h3 {
+    font-size: 14px;
+  }
+  h4 {
+    font-size: 12px;
+  }
+  h5 {
+    font-size: 10px;
+  }
+  h6 {
+    font-size: 8px;
+  }
+  .header__info--title {
+    text-align: center;
+  }
+  .skills {
+    text-align: center;
+  }
+  .skills__title {
+    margin-top: 12px;
+  }
+  .personal__info {
+    margin: 18px 32px;
+    text-align: center;
+  }
+}
+/* smaller tablets */
+@media all and (max-width: 960px) {
+  
+}
+
+/* tablets */
+
+@media all and (max-width: 1280px) {
+  h1 {
+    font-size: 18px;
+  }
+  h2 {
+    font-size: 16px;
+  }
+  h3 {
+    font-size: 14px;
+  }
+  h4 {
+    font-size: 14px;
+  }
+  h5 {
+    font-size: 12px;
+  }
+  h6 {
+    font-size: 10px;
+  }
+  .personal__info--item-link {
+    font-size: 12px;
+  }
+  .experience__title {
+    margin: 8px;
+  }
+
+  .experience__item {
+    margin: 16px;
+  }
+  .experience__item--list-item {
+    font-size: 12px;
+  }
+
+
+  i {
+    font-size: 12px;
+  }
 }
