@@ -6,72 +6,148 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/cb77397249.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <aside>
-      <div class="header__info">
-        <h1>Chris Marsh - Resume</h1>
-        <img src="" class="header__img" alt="" />
-        <h4>Web Developer</h4>
-      </div>
-      <div class="personal__info">
-        <h5>Personal Info</h5>
-        <h6>Phone</h6>
-        <p><a href="">+61 435 792 621</a></p>
-        <h6>E-mail</h6>
-        <p><a href="">christopherm4rsh@gmail.com</a></p>
-      </div>
-      <div class="skills">
-        <h3 class="skill__item">HTML</h3>
-        <h3 class="skill__item--experience">Intermediate</h3>
-        <h3 class="skill__item">CSS</h3>
-        <h3 class="skill__item--experience">Intermediate</h3>
-        <h3 class="skill__item">JavaScript</h3>
-        <h3 class="skill__item--experience">Beginner</h3>
-      </div>
-    </aside>
     <main>
+      <aside>
+        <div class="header__info">
+          <h1 class="header__info--title">Chris Marsh - Resume</h1>
+          <figure class="header__img--container">
+            <img src="personal-picture.jpg" class="header__img" alt="" />
+          </figure>
+          <h4>Web Developer</h4>
+          <div class="header__links">
+            <ul class="header__links--list">
+              <li class="header__links--link"> <a href="https://github.com/cjm97"><i class="fa-brands fa-github"></i></a></li>
+              <li class="header__links--link"><a href="https://www.linkedin.com/in/christopher-marsh-b512b3199/"><i class="fa-brands fa-linkedin"></i></a></li>
+              <li class="header__links--link"><a href="mailto: christopherm4rsh@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="personal__info">
+          <h4 class="personal__info--title">Personal Info</h4>
+          <h6 class="personal__info--item">Phone</h6>
+          <p class="personal__info--item-link">
+            <a href="">+61 435 792 621</a>
+          </p>
+          <h6 class="personal__info--item">E-mail</h6>
+          <p class="personal__info--item-link">
+            <a href="">christopherm4rsh@gmail.com</a>
+          </p>
+        </div>
+        <h3 class="skills__title">Skills</h3>
+        <div class="skills">
+          <h3 class="skill__item">HTML</h3>
+          <h3 class="skill__item skill_experience">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star-half-stroke"></i>
+            <i class="fa-regular fa-star"></i>
+          </h3>
+          <h3 class="skill__item">CSS</h3>
+          <h3 class="skill__item skill_experience">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </h3>
+          <h3 class="skill__item">JavaScript</h3>
+          <h3 class="skill__item skill_experience">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star-half-stroke"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </h3>
+          <h3 class="skill__item">Node.js</h3>
+          <h3 class="skill__item skill_experience">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star-half-stroke"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </h3>
+          <h3 class="skill__item">React</h3>
+          <h3 class="skill__item skill_experience">
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </h3>
+        </div>
+      </aside>
       <section id="experience">
-        <h2>Experience</h2>
+        <h2 class="experience__title">Experience</h2>
         <div class="experience__item">
-          <h3>Software Engineering Student</h3>
-          <h4>Institute of Data 2023 - Current</h4>
-          <ul>
-            <li>Mastered HTML5</li>
-            <li>Mastered CSS</li>
-            <li>Rapidly learning JavaScript</li>
+          <h3 class="experience__item--heading">
+            Software Engineering Student
+          </h3>
+          <h4 class="experience__item--subheading">
+            Institute of Data 2023 - Current
+          </h4>
+          <ul class="experience__item--list">
+            <li class="experience__item--list-item">Mastered HTML5</li>
+            <li class="experience__item--list-item">Mastered CSS</li>
+            <li class="experience__item--list-item">
+              Rapidly learning JavaScript
+            </li>
           </ul>
         </div>
         <div class="experience__item">
-            <h3>Registered Nurse</h3>
-            <h4>NSW Health - Westmead Hospital Emergency Department 2018-2023</h4>
-            <ul>
-                <li>Developed excellent time management skills</li>
-                <li>Rapidly developed as a team leader within the department</li>
-                <li>Developed excellent communication skills</li>
-                <li>Ability to escalate concerns as well as de-escalate issues</li>
-            </ul>
+          <h3 class="experience__item--heading">Registered Nurse</h3>
+          <h4 class="experience__item--subheading">
+            NSW Health - Westmead Hospital Emergency Department 2018-2023
+          </h4>
+          <ul class="experience__item--list">
+            <li class="experience__item--list-item">
+              Developed excellent time management skills
+            </li>
+            <li class="experience__item--list-item">
+              Rapidly developed as a team leader within the department
+            </li>
+            <li class="experience__item--list-item">
+              Developed excellent communication skills
+            </li>
+            <li class="experience__item--list-item">
+              Ability to escalate concerns as well as de-escalate issues
+            </li>
+            <li class="experience__item--list-item">Management of the rapidly deteriorating patient</li>
+            <li class="experience__item--list-item">Advanced Life Support Level 2 Skills</li>
+            <li class="experience__item--list-item">Trauma Team Training/Leading</li>
+          </ul>
         </div>
         <div class="experience__item">
-            <h3>Education</h3>
-            <h4>Institute of Data Software Engineerng Course</h4>
-            <h5>Institute of Data, February 2023 - Current</h5>
-            <ul>
-                <li>Web Development</li>
-                <li>HTML5</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>Node.js</li>
-                <li>React</li>
-                <li>Express Servers</li>
-            </ul>
-            <h4>University of Technology, Sydney 2015-2018</h4>
-            <h5>Bachelor of Nursing</h5>
+          <h3 class="experience__item--heading">Education</h3>
+          <h4 class="experience__item--subheading">
+            Institute of Data Software Engineerng Course
+          </h4>
+          <h5>Institute of Data, February 2023 - Current</h5>
+          <ul class="experience__item--list">
+            <li class="experience__item--list-item">Web Development</li>
+            <li class="experience__item--list-item">HTML5</li>
+            <li class="experience__item--list-item">CSS</li>
+            <li class="experience__item--list-item">JavaScript</li>
+            <li class="experience__item--list-item">Node.js</li>
+            <li class="experience__item--list-item">React</li>
+            <li class="experience__item--list-item">Express Servers</li>
+          </ul>
+        </div>
+        <div class="experience__item">
+          <h4 class="experience__item--subheading">
+            University of Technology, Sydney 2015-2018
+          </h4>
+          <h5>Bachelor of Nursing</h5>
         </div>
       </section>
     </main>
-    <footer id="footer">
-      Created by Chris Marsh &copy; 2023
-    </footer>
+    <footer id="footer">Created by Chris Marsh &copy; 2023</footer>
   </body>
 </html>

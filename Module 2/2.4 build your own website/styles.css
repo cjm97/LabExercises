@@ -1,23 +1,187 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* Font/Resets */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
 }
 
-body {
-    display: flex;
+/* General */
 
-}
-
-aside {
-    border: 1px solid black;
+ul {
+  list-style-type: none;
 }
 
 main {
-    border: 1px solid black;
-    height: 100vh;
-    padding: 32px;
+  display: flex;
+  height: 95vh;
+  background-color: #e6efe9;
+}
+#experience {
+  border-radius: 50px;
+  margin: 16px;
+  padding: 16px 32px;
+  background-color: #c2eaba;
+  width: 80vw;
+}
+
+h6 {
+  font-size: 14px;
+}
+
+i {
+  font-size: 14px;
+}
+
+/* header/main info */
+
+aside {
+  border-radius: 50px;
+  margin: 16px;
+  padding: 16px 8px;
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+  background-color: #c5f4e0;
+}
+
+.header__img--container {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.header__img {
+  width: 100%;
+  transform: translateY(-30px);
+}
+
+.header__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.header__info--title {
+  text-align: center;
+  padding: 8px;
+  margin-bottom: 8px;
+}
+
+.header__links--list {
+  display: flex;
+}
+
+.header__links--list i {
+  font-size: 18px;
+  color: black;
+}
+
+.header__links--list i:hover {
+    color:blue;
+}
+
+.header__links--link {
+  padding: 8px;
+}
+.personal__info {
+  margin-top: 32px;
+}
+
+.personal__info--title {
+  padding-bottom: 8px;
+}
+
+.personal__info--item {
+  margin-bottom: 4px;
+}
+
+.personal__info--item-link {
+  padding-bottom: 8px;
+}
+
+.personal__info--item-link > a {
+  text-decoration: none;
+  color: rgba(0, 0, 255, 0.418);
+}
+
+.personal__info--item-link > a:hover {
+  color: blue;
+}
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.skills__title {
+  text-align: center;
+  margin-top: 48px;
+  padding-bottom: 16px;
+}
+.skill__item {
+  padding: 4px;
+  margin: 4px;
+  width: 40%;
+}
+
+/* experience */
+
+.experience__title {
+  margin-bottom: 32px;
+}
+
+.experience__item {
+  margin: 32px;
+}
+
+.experience__item--heading,
+.experience__item--subheading {
+  margin-bottom: 8px;
+}
+
+.experience__item--list {
+  padding-left: 28px;
+}
+
+.experience__item--list-item {
+  list-style-type: circle;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* footer */
+
+footer {
+  background-color: #8f8389;
+  padding: 16px;
+  text-align: center;
+  height: 5vh;
+}
+
+footer:hover {
+  color: white;
+}
+
+/* colors */
+.colour1 {
+  background-color: #e6efe9;
+}
+
+.colour2 {
+  background-color: #c5f4e0;
+}
+.colour3 {
+  background-color: #c2eaba;
+}
+.colour4 {
+  background-color: #a7c4a0;
+}
+.colour5 {
+  background-color: #8f8389;
 }
