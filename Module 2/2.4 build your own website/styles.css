@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
+  color: #eeeeee;
 }
 
 /* General */
@@ -17,10 +18,10 @@ ul {
 main {
   display: flex;
   height: 95vh;
-  background-color: #e6efe9;
+  background-color: #222831;
 }
 #experience {
-  background-color: #c2eaba;
+  background-color: #393e46;
 }
 
 #experience,
@@ -29,6 +30,7 @@ main {
   margin: 16px;
   padding: 16px 32px;
   width: 80vw;
+  box-shadow: 0 8px 10px rgba(255, 255, 255, 0.2);
 }
 
 h6 {
@@ -48,7 +50,8 @@ aside {
   display: flex;
   flex-direction: column;
   width: 20vw;
-  background-color: #c5f4e0;
+  background-color: #393e46;
+  box-shadow: 0 8px 10px rgba(255, 255, 255, 0.2);
 }
 
 .header__img--container {
@@ -57,6 +60,7 @@ aside {
   border-radius: 50%;
   overflow: hidden;
   margin-bottom: 8px;
+  opacity: 0.75;
 }
 
 .header__img {
@@ -83,11 +87,11 @@ aside {
 
 .header__links--list i {
   font-size: 18px;
-  color: black;
+  color: #00adb5;
 }
 
 .header__links--list i:hover {
-  color: blue;
+  color: rgb(0, 173, 181, 0.3);
 }
 
 .header__links--link {
@@ -116,11 +120,11 @@ aside {
 
 .personal__info--item-link > a {
   text-decoration: none;
-  color: rgba(0, 0, 255, 0.418);
+  color: #00adb5;
 }
 
 .personal__info--item-link > a:hover {
-  color: blue;
+  color: rgb(0, 173, 181, 0.3);
 }
 .skills {
   display: flex;
@@ -142,11 +146,11 @@ aside {
 /* experience */
 
 .experience__title {
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 .experience__item {
-  margin: 32px;
+  margin: 24px;
 }
 
 .experience__item--heading,
@@ -166,7 +170,7 @@ aside {
 
 /* projects */
 #projects {
-  background-color: #a7c4a0;
+  background-color: #393e46;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -198,14 +202,15 @@ aside {
 /* footer */
 
 footer {
-  background-color: #5a5a5a;
+  background-color: rgb(0, 173, 181, 0.3);
   padding: 16px;
   text-align: center;
   height: 5vh;
+  color: white;
 }
 
 footer:hover {
-  color: white;
+  color: rgba(255, 255, 255, 0.445);
 }
 
 /* colors */
@@ -228,14 +233,11 @@ footer:hover {
 
 /* mobile */
 
-
-
-
 /* tablets */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 599.98px) {
   body {
-  width: 100%;
+    width: 100%;
   }
   main {
     display: flex;
@@ -247,13 +249,16 @@ footer:hover {
   footer {
     height: auto;
   }
-  
-  aside, #experience, #projects {
+
+  aside,
+  #experience,
+  #projects {
     width: 100%;
     padding: 20px 0;
     margin: 0;
     border-radius: 0;
   }
+
   h1 {
     font-size: 18px;
   }
@@ -285,15 +290,48 @@ footer:hover {
     margin: 18px 32px;
     text-align: center;
   }
-}
-/* smaller tablets */
-@media all and (max-width: 960px) {
-  
+  .experience__title {
+    text-align: center;
+  }
+  .experience__item {
+    padding-left: 48px;
+    max-width: 400px;
+    width: 399px;
+  }
+  .project__item--image-wrapper {
+    width: 300px;
+  }
+
+  footer {
+    font-size: 12px;
+  }
 }
 
-/* tablets */
+/* smaller phone */
+@media screen and (max-width: 1350px) {
+  body {
+    width: 100%;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+  }
 
-@media all and (max-width: 1280px) {
+  footer {
+    height: auto;
+  }
+
+  aside,
+  #experience,
+  #projects {
+    width: 100%;
+    padding: 20px 0;
+    margin: 0;
+    border-radius: 0;
+  }
+
   h1 {
     font-size: 18px;
   }
@@ -304,30 +342,40 @@ footer:hover {
     font-size: 14px;
   }
   h4 {
-    font-size: 14px;
+    font-size: 12px;
   }
   h5 {
-    font-size: 12px;
-  }
-  h6 {
     font-size: 10px;
   }
-  .personal__info--item-link {
-    font-size: 12px;
+  h6 {
+    font-size: 8px;
+  }
+  .header__info--title {
+    text-align: center;
+  }
+  .skills {
+    text-align: center;
+  }
+  .skills__title {
+    margin-top: 12px;
+  }
+  .personal__info {
+    margin: 18px 32px;
+    text-align: center;
   }
   .experience__title {
-    margin: 8px;
+    text-align: center;
   }
-
   .experience__item {
-    margin: 16px;
+    padding-left: 48px;
+    max-width: 400px;
+    width: 399px;
   }
-  .experience__item--list-item {
-    font-size: 12px;
+  .project__item--image-wrapper {
+    width: 300px;
   }
 
-
-  i {
+  footer {
     font-size: 12px;
   }
 }
