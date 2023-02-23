@@ -10,7 +10,9 @@
 }
 
 /* General */
-
+body {
+  width: 100vw;
+}
 ul {
   list-style-type: none;
 }
@@ -29,7 +31,7 @@ main {
   border-radius: 50px;
   margin: 16px;
   padding: 16px 32px;
-  width: 80vw;
+  width: 33%;
   box-shadow: 0 8px 10px rgba(255, 255, 255, 0.2);
 }
 
@@ -49,7 +51,7 @@ aside {
   padding: 16px 8px;
   display: flex;
   flex-direction: column;
-  width: 20vw;
+  width: 30%;
   background-color: #393e46;
   box-shadow: 0 8px 10px rgba(255, 255, 255, 0.2);
 }
@@ -166,6 +168,7 @@ aside {
   list-style-type: circle;
   font-size: 16px;
   line-height: 1.5;
+  overflow-wrap: break-word;
 }
 
 /* projects */
@@ -231,34 +234,16 @@ footer:hover {
   background-color: #8f8389;
 }
 
+/* MEDIA QUERIES */
+
 /* mobile */
-
-/* tablets */
-
-@media screen and (max-width: 599.98px) {
-  body {
-    width: 100%;
-  }
+@media screen and (max-width: 600px){
   main {
     display: flex;
     flex-direction: column;
     height: auto;
     width: 100%;
   }
-
-  footer {
-    height: auto;
-  }
-
-  aside,
-  #experience,
-  #projects {
-    width: 100%;
-    padding: 20px 0;
-    margin: 0;
-    border-radius: 0;
-  }
-
   h1 {
     font-size: 18px;
   }
@@ -277,61 +262,45 @@ footer:hover {
   h6 {
     font-size: 8px;
   }
-  .header__info--title {
-    text-align: center;
-  }
-  .skills {
-    text-align: center;
-  }
-  .skills__title {
-    margin-top: 12px;
-  }
-  .personal__info {
-    margin: 18px 32px;
-    text-align: center;
-  }
-  .experience__title {
-    text-align: center;
-  }
-  .experience__item {
-    padding-left: 48px;
-    max-width: 400px;
-    width: 399px;
-  }
-  .project__item--image-wrapper {
-    width: 300px;
+  .experience__item--list-item {
+    font-size: 12px;
   }
 
-  footer {
+  aside, #experience, #projects {
+   width: 100%;
+   margin: 0;
+   padding: 0;
+   border-radius: 0;
+  }
+
+  .project__item--image-wrapper {
+    width: 200px;
+  }
+
+  .project__image {
+    border: none;
+  }
+
+  .project__image:hover {
+    opacity: 0.1;
+  }
+
+  #footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 12px;
   }
 }
 
-/* smaller phone */
-@media screen and (max-width: 1350px) {
-  body {
-    width: 100%;
-  }
+/* tablets */
+@media screen and  (max-width:992px) and (min-width: 600px){
   main {
     display: flex;
     flex-direction: column;
     height: auto;
     width: 100%;
   }
-
-  footer {
-    height: auto;
-  }
-
-  aside,
-  #experience,
-  #projects {
-    width: 100%;
-    padding: 20px 0;
-    margin: 0;
-    border-radius: 0;
-  }
-
   h1 {
     font-size: 18px;
   }
@@ -350,32 +319,67 @@ footer:hover {
   h6 {
     font-size: 8px;
   }
-  .header__info--title {
-    text-align: center;
+  .experience__item--list-item {
+    font-size: 12px;
   }
-  .skills {
-    text-align: center;
+
+  aside, #experience, #projects {
+   width: 100%;
+   margin: 0;
+   padding: 0;
+   border-radius: 0;
   }
-  .skills__title {
-    margin-top: 12px;
+
+  .project__item--image-wrapper {
+    width: 200px;
   }
-  .personal__info {
-    margin: 18px 32px;
-    text-align: center;
+
+  .project__image {
+    border: none;
   }
-  .experience__title {
-    text-align: center;
+
+  .project__image:hover {
+    opacity: 0.1;
   }
-  .experience__item {
-    padding-left: 48px;
-    max-width: 400px;
-    width: 399px;
+
+  #footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+  }
+}
+
+/* between tablets and desktop */
+@media screen and (min-width: 993px) {
+  h1 {
+    font-size: 18px;
+  }
+  h2 {
+    font-size: 16px;
+  }
+  h3 {
+    font-size: 14px;
+  }
+  h4 {
+    font-size: 12px;
+  }
+  h5 {
+    font-size: 10px;
+  }
+  h6 {
+    font-size: 8px;
+  }
+  .experience__item--list-item {
+    font-size: 12px;
   }
   .project__item--image-wrapper {
     width: 300px;
   }
-
-  footer {
-    font-size: 12px;
+  #experience {
+    padding: 12px;
+  }
+  .experience__title {
+    padding-left: 12px;
   }
 }

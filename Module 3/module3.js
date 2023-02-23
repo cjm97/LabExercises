@@ -204,3 +204,78 @@ cityStats(london);
 let teamSports = ['Hockey', 'Cricket', 'Volleyball'];
 let dog1 = 'Bingo';
 let cat1 = { name: 'Fluffy', breed: 'Siberian' };
+//9a
+let moreSports = teamSports;  
+moreSports.push("Basketball", "Swimming", "Golf")
+moreSports.unshift("Tennis")
+
+//9b
+let dog2 = dog1;
+dog2 = 'Fenrir';
+
+//9c
+let cat2 = cat1;
+cat2.name = "Floofy";
+
+//9d
+console.log(moreSports);
+console.log(teamSports);
+console.log(dog1);
+console.log(dog2);
+console.log(cat1);
+console.log(cat2);
+
+//cat 2 and teamSports are both referencing the same underlying object (i.e. list of sports / name/breed value of cat), when we create a new variable (cat2/moreSports) and assign it to the existing initial object, both variables reference the same underlying object. Any changes made to either variable will affect the other variable. 
+
+//9e
+
+let moreSports2 = [...teamSports]; // shallow copy [] makes a new array spread {} makes a new object spread. 
+moreSports2.shift();
+moreSports2.pop();
+
+const cat3 = { ...cat1 }; //shallow copy 
+cat3.name = "Flappy";
+console.log(teamSports);
+console.log(moreSports2); // 
+console.log(cat3);
+console.log(cat2);
+
+
+//10.
+
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+  this.human = true;
+  this.canDrive = function() {
+    return this.age > 16;
+  }
+  }
+
+  let person1 = new Person("Tim", 14);
+  let person2 = new Person("Chris", 25);
+
+  console.log(person1);
+  console.log(person1.name);
+  console.log(person1.age);
+  console.log(person2);
+  console.log(person2.name);
+  console.log(person2.age);
+
+  class PersonClass {
+    constructor(name, age) {
+      this.name = name;
+      this.age = age;
+      this.human = true;
+      this.canDrive = function (){
+        return this.age > 16;
+      }
+    }
+  }
+  
+  let person3 = new PersonClass("Rose", 26)
+  console.log(person3);
+
+  console.log(person1.canDrive());
+  console.log(person2.canDrive());
+  console.log(person3.canDrive());
