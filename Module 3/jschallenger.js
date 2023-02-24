@@ -103,3 +103,33 @@ function myFunction9(a, n){
 console.log(myFunction9([1, 2, 3, 4, 5], 3));
 console.log(myFunction9([10, 9, 8, 7, 6], 5));
 console.log(myFunction9([7, 2, 1, 6, 3], 1));
+
+
+let lastThreeElements = (a) => {
+    let length = a.length;
+    return a.slice(length-3, length);
+}
+
+console.log (lastThreeElements([99, 1, 1])) 
+
+
+//removing a specific item "b" from an array [a];
+
+let removeB = (a, b) => {
+    return a.filter(item => item !== b);
+}
+
+console.log(removeB([1,2,'2',1], 1))
+
+// count number of negative values in an array.
+
+let countNegative = (a) => (a.filter(item => item < 0)).length;
+
+
+console.log(countNegative([1, -2, 2, -4]))
+
+// sort the array elements alphabetically 
+
+let alphabeticallySort = (arr) => arr.sort();
+
+console.log(alphabeticallySort(['b', 'c', 'd', 'a']));
