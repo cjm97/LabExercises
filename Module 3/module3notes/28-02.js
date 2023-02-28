@@ -89,3 +89,26 @@ console.log(tomorrow);
 
 console.log(today.toLocaleTimeString());
 console.log(christmas.toLocaleString());
+
+
+
+// work out days between now and easter sunday 
+
+const easterSunday = new Date("2023-04-09");
+console.log(easterSunday.toLocaleString());
+
+const difference = easterSunday - today;
+
+console.log("days until easter " + difference / 1000 /60 / 60 / 24); //  convert from ms to s to m to h to days
+
+let daysDiff =  easterSunday.getDate() - today.getDate();
+let monthsDiff = easterSunday.getMonth() - today.getMonth();
+
+if (daysDiff < 0) {
+    monthsDiff--;
+    daysDiff += new Date(easterSunday.getFullYear(), easterSunday.getMonth(), 0).getDate();
+    console.log(daysDiff);
+
+}
+
+console.log(`There are ${daysDiff} days and ${monthsDiff} months until Easter Sunday`);

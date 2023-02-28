@@ -342,7 +342,7 @@ const latestBook = () => {
 };
 
 console.log(latestBook());
-
+ 
 // 8. The following code creates a new Map object for storing names beginning with A, B, or C
 // with their phone numbers.
 const phoneBookABC = new Map(); //an empty map to begin with
@@ -420,16 +420,17 @@ console.log(`${today.getHours() * 60} minutes have passed so far today`);
 console.log(`${today.getHours() * 60 * 60} seconds have passed so far today`);
 // c) Calculate and print your age as: 'I am x years, y months and z days old'
 const getCurrentAge = (birthDate) => {
-  let years = today.getFullYear() - birthDate.getFullYear();
-  let months = today.getMonth() - birthDate.getMonth();
-  let days = today.getDate() - birthDate.getDate();
+  birthDate = new Date(`${birthDate}`); // fixes the problem of using different date formats
+  let years = today.getFullYear() - birthDate.getFullYear(); // calculates years passed since birth
+  let months = today.getMonth() - birthDate.getMonth(); //calculates months since birth month
+  let days = today.getDate() - birthDate.getDate(); //calculates days passed since day of birth
 
-  if (months < 0 || (months === 0 && days < 0)) {
-    years--;
-    months += 12;
+  if (months < 0 || (months === 0 && days < 0)) { // -ve months or -ve days & month = 0 means birthday hasn't passed yet 
+    years--; //reduce year by one as birthday hasn't occurred
+    months += 12; //increase months by 12
   }
 
-  if (days < 0) {
+  if (days < 0) { // if days less than 0 reduce month by one and add on amount of days ;
     months--;
     days += new Date(today.getFullYear(), today.getMonth(), 0).getDate(); //calculates number of days in the previous month and adds it to the days counter;
   }
@@ -462,3 +463,4 @@ const daysInBetween = (date1, date2) => {
 
   return `It has been ${years} years, ${months} months & ${days} days between ${date1} and ${date2}`;
 };
+
