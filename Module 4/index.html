@@ -1,0 +1,218 @@
+<template id="card-template">
+  <div class="card">
+    <div class="card-body">
+      <div class="card-title"></div>
+      <div class="card-text"></div>
+    </div>
+  </div>
+</template>
+
+<template id="author-template">
+  <div class="card">
+    <div class="card-body">
+      <div class="name"></div>
+      <div class="dates"></div>
+      <div class="books"></div>
+    </div>
+  </div>
+</template>
+
+<template id="book-template">
+  <div class="card">
+    <div class="card-body">
+      <div class="book-title"></div>
+    </div>
+  </div>
+</template>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #e3f2fd;
+      }
+
+      .card {
+        padding: 10px;
+        border: 1px solid black;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .card-body {
+        display: flex;
+      }
+
+      #card-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      .card-title {
+        font-weight: 600;
+        font-size: 3em;
+        padding: 0 0 10px 0;
+      }
+      .card-description {
+        font-weight: 400;
+        font-size: 2em;
+      }
+
+      .artist__img {
+        width: 200px;
+      }
+
+      .img__card {
+        background-color: aliceblue;
+        padding: 10px;
+        border: 1px solid black;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="card-list"></div>
+  </body>
+  <script>
+    function addCard(cardTitle, cardText) {
+      const template = document
+        .getElementById("card-template")
+        .content.cloneNode(true);
+      template.querySelector(".card-title").innerText = cardTitle;
+      template.querySelector(".card-text").innerText = cardText;
+      document.querySelector("#card-list").appendChild(template);
+    }
+    // if ("content" in document.createElement("template")) {
+    // }
+
+    //   addCard(
+    //     "My Panagram Card 1",
+    //     "The quick brown fox jumped over the lazy dog."
+    //   );
+    //   addCard("My Panagram Card 2", "Sphinx of black quartz, judge my vow.")
+    //   addCard("My Panagram Card 3", "How vexingly quick daft zebras jump!")
+
+    //add a border to your cards with CSS and use flexbox to lay them out
+
+    //modify addCard to accept 2 parameters: one for the title and one for the text, instead of hardcoding them
+
+    //call the new addCard function 2 or 3 times to create multiple cards with different titles and content
+
+    //examine the generated HTML using the Dev Inspector browser tool to see how it looks
+
+    const data = [
+      { name: "bob", age: 23 },
+      { name: "alice", age: 39 },
+      { name: "chris", age: "25" },
+      { name: "rose", age: "26" },
+    ];
+
+    // data.forEach((item) => addCard(item.name, item.age));
+
+    function addArtist(artist) {
+      const template = document
+        .getElementById("card-template")
+        .content.cloneNode(true);
+      template.querySelector(
+        ".card-title"
+      ).innerText = `Artist: ${artist.name}`;
+      const card__title = document.querySelector(".card-title");
+      template
+        .querySelector(".card-body")
+        .classList.add(`${artist.name.slice(0, 3)}`);
+      document.querySelector("#card-list").appendChild(template);
+      artPortfolio(artist);
+    }
+
+    //function deals with populating cards representing an artist's portfolio
+    const artPortfolio = (artist) => {
+      artist.portfolio.forEach((element) => {
+        const img__card = document.createElement("div"); //card to store the title and work of the arist
+        img__card.className = "img__card"; //class name for the card
+        const artist__description = document.createElement("p"); //description element that will contain the title of the work
+        const artist__img = document.createElement("img"); // element to store the image of the artist
+        artist__img.className = "artist__img"; // class name for the image
+
+        document
+          .querySelector(`.${artist.name.slice(0, 3)}`)
+          .appendChild(img__card);
+        img__card.appendChild(artist__description);
+        img__card.appendChild(artist__img);
+
+        if (element.title.includes(" ")) {
+          let splitTitle = element.title.split(" ");
+          let fixedTitle = "";
+          splitTitle.forEach(
+            (word) =>
+              (fixedTitle +=
+                word.slice(0, 1).toUpperCase() + word.slice(1) + " ")
+          );
+          if (fixedTitle.includes("(")) {
+            let bracketIndex = fixedTitle.indexOf("(");
+            console.log(bracketIndex);
+            let fixedBracketLetter = fixedTitle
+              .slice(bracketIndex + 1, bracketIndex + 2)
+              .toUpperCase();
+            console.log(fixedBracketLetter);
+            fixedBracketLetter =
+              fixedTitle.slice(0, bracketIndex + 1) +
+              fixedBracketLetter +
+              fixedTitle.slice(bracketIndex + 2);
+            console.log(fixedBracketLetter);
+            fixedTitle = fixedBracketLetter;
+          }
+          artist__description.innerText = `Work: ${fixedTitle}`;
+        } else {
+          artist__description.innerText = `Work: ${
+            element.title.slice(0, 1).toUpperCase() + element.title.slice(1)
+          }`;
+        }
+        artist__img.src = `${element.url}`;
+      });
+    };
+
+    const artist = {
+      name: "Van Gogh",
+      portfolio: [
+        {
+          title: "portrait",
+          url: "https://collectionapi.metmuseum.org/api/collection/v1/iiif/436532/1671316/main-image",
+        },
+        {
+          title: "sky",
+          url: "https://mymodernmet.com/wp/wp-content/uploads/2020/11/White-house-night-van-goh-worldwide-2.jpg",
+        },
+        {
+          title: "the starry night",
+          url: "https://cdn.britannica.com/78/43678-050-F4DC8D93/Starry-Night-canvas-Vincent-van-Gogh-New-1889.jpg",
+        },
+      ],
+    };
+
+    const artist2 = {
+      name: "Monet",
+      portfolio: [
+        {
+          title: "water lillies",
+          url: "https://collectionapi.metmuseum.org/api/collection/v1/iiif/437127/796089/restricted",
+        },
+        {
+          title: "hay stacks (effect of snow and sun)",
+          url: "https://collectionapi.metmuseum.org/api/collection/v1/iiif/437122/795934/restricted",
+        },
+        {
+          title: "woman with a parasol",
+          url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Claude_Monet_-_Woman_with_a_Parasol_-_Madame_Monet_and_Her_Son_-_Google_Art_Project.jpg/1024px-Claude_Monet_-_Woman_with_a_Parasol_-_Madame_Monet_and_Her_Son_-_Google_Art_Project.jpg",
+        },
+      ],
+    };
+
+    addArtist(artist);
+    addArtist(artist2);
+  </script>
+</html>
