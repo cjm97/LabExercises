@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="moment.js"></script>
+  </head>
+  <body>
+    <!--Container for moment.js output-->
+    <h2>Moment Date</h2>
+    <div id="displayMoment"></div>
+    <!--JavaScript Date-->
+    <h2>JavaScript Date</h2>
+    <div id="displayJsDate"></div>
+
+    <!--js script-->
+    <script>
+      (function () {
+        let nowMoment = moment();
+
+        let nowDate = new Date();
+
+        let eDisplayMoment = document.getElementById("displayMoment");
+        eDisplayMoment.innerHTML = nowMoment;
+
+        let eDisplayDate = document.getElementById("displayJsDate");
+        eDisplayDate.innerHTML = nowDate;
+      })();
+
+      const daysBetween = () => {
+        let myBirthday = moment([1997, 04, 04]);
+        let today = moment();
+        console.log(today.diff(myBirthday, "days"));
+      };
+
+      const yearsMonthsDatesBetween = () => {
+        let myBirthday = moment([1997, 04, 04]);
+        let today = moment();
+
+        let years = today.diff(myBirthday, "year");
+        myBirthday.add(years, "years");
+        let months = today.diff(myBirthday, "months");
+        myBirthday.add(months, "months");
+        let days = today.diff(myBirthday, "days");
+
+        console.log(`Years: ${years}, Months: ${months}, Days: ${days}`);
+      };
+
+      const closerDate = (date1, date2) => {
+        let dateA = moment().format(date1, "DD/MM/YYYY");
+        let dateB = moment().format(date2, "DD/MM/YYYY");
+        let today = moment();
+
+        let diffA = today.diff(dateA, "days");
+        let diffB = today.diff(dateB, "days");
+
+        if (diffA < 0) {
+          diffA = diffA * -1;
+        }
+        if (diffB < 0) {
+          diffB = diffB * -1;
+        }
+
+        diffA > diffB ? console.log(dateB) : console.log(dateA);
+      };
+
+
+      const previousDate = (date1, date2) => {
+        let dateA = moment().format(date1, "DD/MM/YYYY");
+        let dateB = moment().format(date2, "DD/MM/YYYY");
+        let today = moment();
+
+        let diffA = today.diff(dateA, "days");
+        let diffB = today.diff(dateB, "days");
+        
+        console.log(diffA);
+        console.log(diffB);
+        if (diffA < 0 && diffB>0){
+            console.log(`The date ${dateB} is before ${dateA}`);
+        }
+        else if (diffA > 0 && diffB <0){
+            console.log(`The date ${dateA} is before ${dateB}`);
+        }
+        
+      };
+      //   daysBetween()
+      //   yearsMonthsDatesBetween();
+    //   closerDate("05/04/1997", "03/10/1996"); //MM/DD/YYYYY
+      previousDate("09/10/2023", "05/04/1997");
+    </script>
+  </body>
+</html>
