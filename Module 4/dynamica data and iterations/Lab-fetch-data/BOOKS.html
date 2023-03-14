@@ -94,6 +94,9 @@ margin: 0 auto;
 <body>
     <h1 class="NYTh1">NYT Best Sellers</h1>
     <div id="book-list" class="row"></div>
+
+
+    
     <script>
         function addCards(bookList) {
         bookList.forEach((book) => {
@@ -113,6 +116,7 @@ margin: 0 auto;
       fetch("https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=YYRTmuGHrdxW9AaXsNhXhNhApOa05QAG")
         .then((response) => response.json())
         .then((json) => addCards(json.results.books));
+
     </script>
 </body>
 </html>

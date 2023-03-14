@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1 {
+    color: red;
+    background-color: blue;
+}
+
+p{
+    text-align: right;
+}
+
+.container {
+    width: 100%;
+    background-color: green;
+    height: 100px;
+    display: flex;
+}
+
+.row {
+    background-color: pink;
+    width: 50%;
+    height: 50px;
+    border: 1px solid black;
+}

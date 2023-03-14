@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="moment.js"></script>
+    <script src="moment-timezone-with-data.js"></script>
   </head>
   <body>
     <!--Container for moment.js output-->
@@ -77,18 +78,31 @@
         
         console.log(diffA);
         console.log(diffB);
+        
         if (diffA < 0 && diffB>0){
             console.log(`The date ${dateB} is before ${dateA}`);
         }
         else if (diffA > 0 && diffB <0){
             console.log(`The date ${dateA} is before ${dateB}`);
         }
-        
+        else if (diffA > diffB) {
+          console.log(`The date ${dateA} is before ${dateB}`);
+        }
+        else if (diffB > diffA) {
+          console.log(`The date ${dateB} is before ${dateA}`);
+
+        }
       };
       //   daysBetween()
       //   yearsMonthsDatesBetween();
     //   closerDate("05/04/1997", "03/10/1996"); //MM/DD/YYYYY
-      previousDate("09/10/2023", "05/04/1997");
+      previousDate("09/10/1903", "05/04/2077");
+
+    //current london time:
+    let now = moment().tz("Europe/London");
+console.log(now.format('DD/MM/YYYY HH:mm:ss'));
+    </script>
+
     </script>
   </body>
 </html>
